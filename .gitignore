@@ -1,0 +1,16 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.yarn*
+yarn*
+!yarn.lock
+Icon
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+dist/
+$RECYCLE.BIN/
+/\.
+/node_modules/
+*.log

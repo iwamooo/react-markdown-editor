@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo;
+  line-height: 1.7;
+  margin: 0;
+  word-break: break-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+input,
+textarea {
+  border: 0;
+  color: #555;
+  outline: none;
+}
+
+a {
+  color: #5fa9ff;
+  text-decoration: none;
+}
+
+dt {
+  font-weight: 700;
+}
+
+pre {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+
+code {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+hr {
+  background-color: #e5e5e5;
+  border: 0;
+  height: 1px;
+}
+
+blockquote {
+  background-color: #f0f0f0;
+  border-left: 10px solid #e8e8e8;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 15px 20px;
+}
+
+p,
+pre,
+blockquote {
+  margin: 0 0 1.1em;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+main {
+  margin-top: 8vh;
+}

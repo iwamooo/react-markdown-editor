@@ -1,0 +1,182 @@
+.settingNav {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  line-height: 8vh;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 24px;
+  z-index: 2;
+
+  > .item {
+    font-size: 12px;
+    list-style: none;
+  }
+
+  > .item:not(:first-child) {
+    margin-left: 16px;
+  }
+
+  > .item:nth-child(5),
+  > .item:nth-child(8) {
+    margin-left: 32px;
+  }
+
+  > .item > .link {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    size: 20px;
+  }
+
+  > .item .icon {
+    fill: #ccc;
+    transition: 0.3s;
+    vertical-align: top;
+  }
+
+  > .item .iconDownload {
+    fill: #333;
+    size: 20px;
+  }
+
+  .item .text {
+    color: #333;
+    position: absolute;
+    width: 20px;
+    text-align: center;
+  }
+}
+
+.textArea,
+.previewArea {
+  font-size: 18px;
+  overflow-y: scroll;
+  padding: 24px;
+}
+
+.textArea {
+  background-color: #fcfcfc;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo;
+  resize: none;
+  transition: 0.3s;
+}
+
+.previewArea {
+  background-color: #f8f8f8;
+  color: #333;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.panel {
+  height: 92vh;
+  position: relative;
+}
+
+[data-layout="horizontal"] {
+  .panel {
+    display: flex;
+  }
+
+  .textArea,
+  .previewArea {
+    height: 100%;
+  }
+
+  .previewArea {
+    border-left: 1px solid #f0f0f0;
+    top: 0;
+    left: 50%;
+  }
+}
+
+[data-layout="vertical"] {
+  .textArea,
+  .previewArea {
+    width: 100vw;
+  }
+
+  .previewArea {
+    top: 50%;
+    left: 0;
+  }
+}
+
+[data-layout="horizontal"][data-panel="single-edit"] {
+  .textArea {
+    width: 100vw;
+  }
+
+  .previewArea {
+    transform: translate(150%, 0);
+    width: 50vw;
+  }
+}
+
+[data-layout="horizontal"][data-panel="single-preview"] {
+  .textArea {
+    transform: translate(-150%, 0);
+    width: 50vw;
+  }
+
+  .previewArea {
+    left: 0;
+    width: 100vw;
+  }
+}
+
+[data-layout="horizontal"][data-panel="separate"] {
+  .textArea,
+  .previewArea {
+    width: 50vw;
+  }
+}
+
+[data-layout="vertical"][data-panel="single-edit"] {
+  .textArea {
+    height: 92vh;
+  }
+
+  .previewArea {
+    height: 46vh;
+    transform: translate(0, 150%);
+  }
+}
+
+[data-layout="vertical"][data-panel="single-preview"] {
+  .textArea {
+    height: 46vh;
+    transform: translate(0, -150%);
+  }
+
+  .previewArea {
+    height: 92vh;
+    top: 0;
+  }
+}
+
+[data-layout="vertical"][data-panel="separate"] {
+  .textArea {
+    height: 46vh;
+  }
+
+  .previewArea {
+    border-top: 1px solid #f0f0f0;
+    height: 46vh;
+  }
+}
+
+[data-panel="single-edit"] .settingNav .iconSingleEdit,
+[data-panel="single-preview"] .settingNav .iconSinglePreview,
+[data-panel="separate"] .settingNav .iconSeparate,
+[data-layout="horizontal"] .settingNav .iconHorizontal,
+[data-layout="vertical"] .settingNav .iconVertical {
+  fill: #333;
+}
+
+[data-panel="single-edit"] .settingNav .textSingleEdit,
+[data-panel="single-preview"] .settingNav .textSinglePreview {
+  color: #fff;
+}

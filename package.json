@@ -25,9 +25,9 @@
     "js:build": "rollup -c ./config/rollup.js",
     "copy:watch": "yarn copy:build -- -w",
     "copy:build": "cpx './src/img/*.*' ./dist/img",
-    "clean": "rimraf ./dist",
+    "build-file-clean": "rimraf ./dist",
     "watch": "yarn html:watch & yarn css:watch & yarn js:watch & yarn copy:watch &",
-    "build": "yarn clean && yarn html:build && yarn css:lint && yarn css:build && yarn js:lint && yarn js:build && yarn copy:build",
+    "build": "yarn build-file-clean && yarn html:build && yarn css:lint && yarn css:build && yarn js:lint && yarn js:build && yarn copy:build",
     "start": "yarn build && yarn watch && yarn bs",
     "lint": "yarn css:lint & yarn js:lint",
     "test": "ava --verbose"

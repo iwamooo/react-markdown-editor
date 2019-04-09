@@ -1,5 +1,5 @@
 {
-  "name": "react-markdown-editor-example",
+  "name": "react-markdown-editor",
   "version": "1.0.0",
   "main": "",
   "license": "MIT",
@@ -81,6 +81,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yossy0228/react-markdown-editor-example.git"
+    "url": "https://github.com/iwamooo/react-markdown-editor"
   }
 }
